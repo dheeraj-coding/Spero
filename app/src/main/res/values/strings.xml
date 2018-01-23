@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Spero</string>
+    <string name="update">Update</string>
+    <string name="phoneText">Phone:</string>
+    <string name="nameText">Name:</string>
+    <string name="custodian_number">Custodian Number:</string>
+    <string name="appName">Spero</string>
+</resources>
