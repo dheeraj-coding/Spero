@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     String name=line.substring(0,line.indexOf(','));
                     String number=line.substring(line.indexOf(',')+1);
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:"+number.substring(1)));
+                    callIntent.setData(Uri.parse("tel:"+number));
                     startActivity(callIntent);
                 }else{
                     String number=converter.morseToString(morse);
                     Intent callIntent=new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:91"+number));
+                    callIntent.setData(Uri.parse("tel:"+number));
                     startActivity(callIntent);
                 }
                 flag=0;
