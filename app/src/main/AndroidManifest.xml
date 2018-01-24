@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -47,7 +47,7 @@
         </receiver>
 
         <activity android:name=".BookReaderActivity" />
-        <activity android:name=".MessageReceivedActivity"></activity>
+        <activity android:name=".MessageReceivedActivity" />
     </application>
 
 </manifest>

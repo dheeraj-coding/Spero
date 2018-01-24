@@ -1,8 +1,10 @@
 package com.vitanova.dheeraj.spero;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +22,8 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar=(Toolbar)findViewById(R.id.settingsActivityToolbar);
         setSupportActionBar(toolbar);
 
+        TextView tv=(TextView)findViewById(R.id.user_manual_tv);
+        tv.setMovementMethod(new ScrollingMovementMethod());
 
         operator=new FileOperations();
         Button updateBtn=(Button)findViewById(R.id.updateBtn);

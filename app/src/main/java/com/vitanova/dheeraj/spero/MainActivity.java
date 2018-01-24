@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
             if(task.equals("m")){
                 String content=converter.morseToString(morse);
                 Toast.makeText(getApplicationContext(),content,Toast.LENGTH_SHORT).show();
-                v.vibrate(500);
+                v.vibrate(100);
                 String possibleNumber=content.substring(0,content.indexOf(' '));
                 long number;
                 try{
@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     String name=line.substring(0,line.indexOf(','));
                     String number=line.substring(line.indexOf(',')+1);
                     Intent callIntent = new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:"+number));
+                    callIntent.setData(Uri.parse("tel:+91"+number));
                     startActivity(callIntent);
                 }else{
                     String number=converter.morseToString(morse);
                     Intent callIntent=new Intent(Intent.ACTION_CALL);
-                    callIntent.setData(Uri.parse("tel:"+number));
+                    callIntent.setData(Uri.parse("tel:+91"+number));
                     startActivity(callIntent);
                 }
                 flag=0;
@@ -139,10 +139,10 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
             }else if(task.equals("r")){
                 Intent bookStart=new Intent(getApplicationContext(),BookReaderActivity.class);
                 startActivity(bookStart);
+                this.finish();
                 morse="";
                 flag=0;
                 task="";
-                finish();
 
             }else{
                 long pattern[]=VibrationPattern.generate(converter.stringToMorse("choose"));

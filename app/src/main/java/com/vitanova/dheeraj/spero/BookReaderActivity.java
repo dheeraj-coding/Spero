@@ -31,7 +31,7 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
     Vibrator v;
     String line;
     TextView tv;
-
+    String theBook;
     public BookReaderActivity() {
         super();
         this.line="";
@@ -43,7 +43,20 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_reader);
-
+        theBook="When forty winters shall besiege thy brow,\n" +
+                "And dig deep trenches in thy beauty's field,\n" +
+                "Thy youth's proud livery so gazed on now,\n" +
+                "Will be a totter'd weed of small worth held:\n" +
+                "Then being asked, where all thy beauty lies,\n" +
+                "Where all the treasure of thy lusty days;\n" +
+                "To say, within thine own deep sunken eyes,\n" +
+                "Were an all-eating shame, and thriftless praise.\n" +
+                "How much more praise deserv'd thy beauty's use,\n" +
+                "If thou couldst answer 'This fair child of mine\n" +
+                "Shall sum my count, and make my old excuse,'\n" +
+                "Proving his beauty by succession thine!\n" +
+                "   This were to be new made when thou art old,\n" +
+                "   And see thy blood warm when thou feel'st it cold.";
         mDetector =new GestureDetectorCompat(this,this);
         mDetector.setOnDoubleTapListener(this);
         v=(Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
@@ -56,13 +69,17 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
         int previous=0;
 
         content=operator.read("book");
+        if(content==null){
+            operator.write("book",theBook);
+        }
+        content=operator.read("book");
+
         content=content+"-end";
-        Log.d("book",content);
+
 
         if(content!=null ){
             if(!content.equals("-end")){
                 if(content.contains("/")){
-                    Toast.makeText(getApplicationContext(),content,Toast.LENGTH_SHORT).show();
                     line=content.substring(0,content.indexOf('/'));
                     content=content.substring(content.indexOf('/')+1);
                     String morse=converter.stringToMorse(line);
@@ -90,11 +107,10 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
     @Override
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
         if(!content.equals("-end")){
-
+            Log.d("book",content);
             line=content.substring(0,content.indexOf('/'));
             line=line.trim();
             content=content.substring(content.indexOf('/')+1);
-            Toast.makeText(getApplicationContext(),content,Toast.LENGTH_SHORT).show();
             String morse=converter.stringToMorse(line);
             pattern = VibrationPattern.generate(morse);
             tv.setText(line);
@@ -102,7 +118,7 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
         }else{
             line="end";
             FileOperations operator=new FileOperations();
-            content=content.replace('/',' ');
+            content=content.replace('/','\n');
             content=content.substring(0,content.length()-4);
             content=content.trim();
             operator.write("book",content);
@@ -138,7 +154,7 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
     public boolean onDoubleTap(MotionEvent motionEvent) {
         v.cancel();
         FileOperations operator=new FileOperations();
-        content=content.replace('/',' ');
+        content=content.replace('/','\n');
         content=content.substring(0,content.length()-4);
         content=content.trim();
         operator.write("book",content);

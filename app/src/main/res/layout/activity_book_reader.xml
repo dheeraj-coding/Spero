@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.vitanova.dheeraj.spero.BookReaderActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"

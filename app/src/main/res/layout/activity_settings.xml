@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/custodian_number"
+                android:text="@string/custodian_details"
                 android:gravity="center_horizontal"
                 android:textSize="30sp"
                 />
@@ -90,7 +90,13 @@
                 android:text="@string/update"
                 android:id="@+id/updateBtn"
                 />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scrollbars="vertical"
+                android:id="@+id/user_manual_tv"
+                android:text="@string/user_manual"
+                android:textSize="15sp"/>
         </LinearLayout>
     </LinearLayout>
 

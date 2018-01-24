@@ -5,4 +5,46 @@
     <string name="nameText">Name:</string>
     <string name="custodian_number">Custodian Number:</string>
     <string name="appName">Spero</string>
+    <string name="custodian_details">Custodian Details</string>
+    <string name="user_manual">
+        User Manual:\n
+        >Swipe to enter message mode\n
+        >Swipe again to exit message mode\n
+        >Long press to enter Reading mode\n
+        >Long press again to exit reading mode\n
+        >Double Tap to enter calling mode\n
+        >Double Tap again to exit calling mode\n
+
+        >>In Message Mode:\n
+        >Enter the message only and do a two finger
+            touch to send message to custodian\n
+        >Enter Phone Number followed by the message body to send to custom number specified
+            and do a two finger touch to send message\n
+
+        >>In Phone mode:\n
+        >Enter the phone number and do a two finger touch to make a call to a custom number\n
+        >Do a two finger touch to make a call to custodian\n
+
+        >>In Read Mode:\n
+        >Two finger touch to start reading.\n
+        >The book is read line by line so swipe up to read next line\n
+        >Double tap to stop reading\n
+
+        >>Message Received:\n
+        >The received message is given in morse vibrations output \n
+        >Double tap to stop reading\n
+
+        >>All input must be in morse code\n
+
+        >>Morse gestures:\n
+        >Double tap represents a dot \n
+        >Long Press represents a dash \n
+        >Single tap represents a space \n
+
+        >>Each letter in morse is separated by space and each word is separated by double space\n
+        Eg: .&lt;space&gt;-.&lt;space&gt;-..&lt;space&gt;&lt;space&gt;.&lt;space&gt;-.&lt;space&gt;-.. represents \n
+
+        **Do not kill the app or else the app wont launch upon unlock
+    </string>
+    <string name="user_manual_btn">User Manual</string>
 </resources>
