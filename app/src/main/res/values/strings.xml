@@ -13,37 +13,37 @@
         >Long press to enter Reading mode\n
         >Long press again to exit reading mode\n
         >Double Tap to enter calling mode\n
-        >Double Tap again to exit calling mode\n
+        >Double Tap again to exit calling mode\n\n
 
         >>In Message Mode:\n
         >Enter the message only and do a two finger
             touch to send message to custodian\n
         >Enter Phone Number followed by the message body to send to custom number specified
-            and do a two finger touch to send message\n
+            and do a two finger touch to send message\n\n
 
         >>In Phone mode:\n
         >Enter the phone number and do a two finger touch to make a call to a custom number\n
-        >Do a two finger touch to make a call to custodian\n
+        >Do a two finger touch to make a call to custodian\n\n
 
         >>In Read Mode:\n
         >Two finger touch to start reading.\n
         >The book is read line by line so swipe up to read next line\n
-        >Double tap to stop reading\n
+        >Double tap to stop reading\n\n
 
         >>Message Received:\n
         >The received message is given in morse vibrations output \n
-        >Double tap to stop reading\n
+        >Double tap to stop reading\n\n
 
-        >>All input must be in morse code\n
+        >>All input must be in morse code\n\n
 
         >>Morse gestures:\n
         >Double tap represents a dot \n
         >Long Press represents a dash \n
-        >Single tap represents a space \n
+        >Single tap represents a space \n\n
 
         >>Each letter in morse is separated by space and each word is separated by double space\n
-        Eg: .&lt;space&gt;-.&lt;space&gt;-..&lt;space&gt;&lt;space&gt;.&lt;space&gt;-.&lt;space&gt;-.. represents \n
-
+        Eg: .&lt;space&gt;-.&lt;space&gt;-..&lt;space&gt;&lt;space&gt;.&lt;space&gt;-.&lt;space&gt;-.. represents \n\n
+        >Swipe to delete the previous wrongly entered morse character\n\n
         **Do not kill the app or else the app wont launch upon unlock
     </string>
     <string name="user_manual_btn">User Manual</string>

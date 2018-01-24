@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,7 @@ public class BookReaderActivity extends AppCompatActivity implements GestureDete
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_reader);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         theBook="When forty winters shall besiege thy brow,\n" +
                 "And dig deep trenches in thy beauty's field,\n" +
                 "Thy youth's proud livery so gazed on now,\n" +
